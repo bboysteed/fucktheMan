@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+
+    <script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+
+<!--    <script>-->
+<!--        let origin = XMLHttpRequest.prototype.open;-->
+
+<!--        XMLHttpRequest.prototype.open = function (...args) {-->
+<!--            //在这里插入open拦截代码-->
+<!--            console.log("after req,args->",args)-->
+<!--            this.__on_response=function(res){return res}-->
+<!--            return origin.apply(this, args);-->
+<!--        };-->
+<!--        var accessor = Object.getOwnPropertyDescriptor(-->
+<!--            XMLHttpRequest.prototype,-->
+<!--            "response"-->
+<!--        );-->
+
+<!--        Object.defineProperty(XMLHttpRequest.prototype, "response", {-->
+<!--            get: function () {-->
+<!--                let response = accessor.get.call(this);-->
+
+<!--                //在__on_response里修改你的response-->
+<!--                response=this.__on_response(res)-->
+
+<!--                return response;-->
+<!--            },-->
+<!--            set: function (str) {-->
+<!--                return accessor.set.call(this, str);-->
+<!--            },-->
+<!--            configurable: true,-->
+<!--        });-->
+
+<!--    </script>-->
+</head>
+<body>
+
+<iframe id="ifm" src="https://6570198342-ls.5ddp6kmp70.com/login" frameborder="0" width="100%" height="1000px"></iframe>
+<script>
+    window.location.href = "https://6570198342-ls.5ddp6kmp70.com/login"
+    document.getElementById("ifm").onload = function(){
+        document.getElementById('ifm')//获取到iframe
+            .contentWindow//获取到iframe的window
+            .document//获取到iframe的document.createElement('script')
+            .createElement("script").innerText = `
+        let origin = XMLHttpRequest.prototype.open;
+
+        XMLHttpRequest.prototype.open = function (...args) {
+            //在这里插入open拦截代码
+            console.log("after req,args->",args)
+            this.__on_response=function(res){return res}
+            return origin.apply(this, args);
+        };
+        var accessor = Object.getOwnPropertyDescriptor(
+            XMLHttpRequest.prototype,
+            "response"
+        );
+
+        Object.defineProperty(XMLHttpRequest.prototype, "response", {
+            get: function () {
+                let response = accessor.get.call(this);
+
+                //在__on_response里修改你的response
+                response=this.__on_response(res)
+
+                return response;
+            },
+            set: function (str) {
+                return accessor.set.call(this, str);
+            },
+            configurable: true,
+        });`
+            // .find("#ifmh1").css("color","orange")
+    };
+</script>
+</body>
+</html>

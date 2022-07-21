@@ -1,0 +1,24 @@
+HTTrack3.49-2 launched on Sat, 16 Jul 2022 23:48:14 at https://613880.app/user-search-result.php?search=633269fq&a=arcekq&i=ea73775969757d094d18ff67e4539e8076f6dcd83c50b24f8c5b0402698816b7
+(httrack https://613880.app/user-search-result.php?search=633269fq&a=arcekq&i=ea73775969757d094d18ff67e4539e8076f6dcd83c50b24f8c5b0402698816b7 -b0 )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:48:46	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddbf26ee0 (from https://613880.app/index.php)
+23:48:46	Error: 	"Not Found" (404) at link https://613880.app/securimage_play.swf?bgcol=%23ffffff&icon_file=%2Fimages%2Faudio_icon.png&audio_file=%2Fsecurimage_play.php%3F (from https://613880.app/index.php)
+23:48:46	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddbf26ee7 (from https://613880.app/index.php)
+23:48:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddbf26ee0 (from https://613880.app/index.php)
+23:48:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddbf26ee7 (from https://613880.app/index.php)
+23:48:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddd67e49a (from https://613880.app/)
+23:48:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddd67e4a1 (from https://613880.app/)
+23:49:49	Error: 	"Internal Server Error" (500) after 2 retries at link https://613880.app/securimage_play.php?id=62d2ddbf26ee0 (from https://613880.app/index.php)
+23:49:49	Error: 	"Internal Server Error" (500) after 2 retries at link https://613880.app/securimage_play.php?id=62d2ddbf26ee7 (from https://613880.app/index.php)
+23:49:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddd67e49a (from https://613880.app/)
+23:49:49	Warning: 	Retry after error 500 (Internal Server Error) at link https://613880.app/securimage_play.php?id=62d2ddd67e4a1 (from https://613880.app/)
+23:49:51	Error: 	"Internal Server Error" (500) after 2 retries at link https://613880.app/securimage_play.php?id=62d2ddd67e49a (from https://613880.app/)
+23:49:51	Error: 	"Internal Server Error" (500) after 2 retries at link https://613880.app/securimage_play.php?id=62d2ddd67e4a1 (from https://613880.app/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 37 seconds : 41 links scanned, 27 files written (1837726 bytes overall) [1039950 bytes received at 10721 bytes/sec], 1166361 bytes transferred using HTTP compression in 13 files, ratio 26%, 7.3 requests per connection
+(5 errors, 8 warnings, 0 messages)

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Welcome</title>
+<link href="/default/css/login2.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/x-icon" href="/imgww/general/generic_favicon.ico"><script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.login .info input[title!=""]').focus(function() {
+		var t = $(this);
+		if (t.hasClass('tip')) {
+			t.removeClass('tip').val('').attr('type', t.data('ot'));
+		}
+	}).blur(function() {
+		var t = $(this);
+		if (t.val() == '') {
+			t.addClass('tip').val(t.attr('title')).data('ot', t.attr('type')).attr('type', 'text');
+		}
+	}).each(function() {
+		var t = $(this);
+		if (!t.attr('value')) {
+			t.addClass('tip').val(t.attr('title')).data('ot', t.attr('type')).attr('type', 'text');
+		}
+	});
+	$('.login .code img').click(function(){
+		$(this).attr('src','code?_='+(new Date()).getTime());
+	});
+	$('.fr.user_f').click(function(){
+		$('.info.facode').slideToggle();
+	});
+})
+</script>
+
+</head>
+<body>
+<div class="header"></div>
+<div class="main">
+<div class="panel">
+<div class="login">
+
+<form action="login" method="post">
+	<input type="hidden" name="type" value="1">
+	<div class="form_t">
+        <span class="fl user_t">用户登录</span>
+        
+    </div>
+	<div class="info username"><label>账号</label><input type="text" name="account" title="请输入您的账号"></div>
+	<div class="info password"><label>密码</label><input type="password" name="password" title="您的密码"></div>
+	<div class="info code"><label>验证码</label><input type="text" name="code" autocomplete="off" title="验证码"><img src="code?_=1657978271264" alt="none" title="看不清？点击更换一张验证图片" /></div>
+	
+	<div class="control"><input type="submit" value="登录"></div>
+</form>
+</div>
+
+<div class="left_adv">
+  <div class="appqr-wrapper">
+    <div class="appqrcode">
+      <img id="qr-code">
+      <div class="text">手机扫码安装<br>苹果安卓APP</div>
+    </div>
+    <div id="barcodeURL" class="appdlurl">
+      <a id="linkUrl">请点击下载APP</a>
+    </div>
+  </div>
+  <div class="appqr" id="qr"></div>
+</div>
+<link href="/default/css/footer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/default/js/qrcode.min.js"></script>
+<script type="text/javascript">
+  var qr = "https://luckiapp.com";
+  if(qr !== ""){
+    new QRCode(document.getElementById("qr"), qr);
+    document.getElementById("linkUrl").href=""+qr;
+  }
+</script>
+</div>
+</div>
+<style>
+    .generated-sidebar {
+        position: fixed;
+        top:  50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+    .generated-sidebar .generated-sidebar--btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 40%;
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: center;
+    }
+
+    .generated-sidebar .generated-sidebar--btn:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    .generated-sidebar .generated-sidebar--btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 40%;
+        border: 4px solid rgba(255,255,255,0.5);
+        transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0;
+    }
+
+
+    .generated-sidebar .generated-sidebar--btn:hover:before {
+        opacity: 1;
+    }
+
+    .generated-sidebar .generated-sidebar--btn.mac {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik0zOTUuNzQ4LDI3Mi4wNDZjLTAuNjQ2LTY0Ljg0MSw1Mi44OC05NS45MzgsNTUuMjcxLTk3LjQ4M2MtMzAuMDc1LTQ0LjAxLTc2LjkyNS01MC4wMzktOTMuNjItNTAuNzM2ICAgYy0zOS44NzEtNC4wMzctNzcuNzk4LDIzLjQ3NC05OC4wMzMsMjMuNDc0Yy0yMC4xODQsMC01MS40MDktMjIuODc3LTg0LjQ3Ni0yMi4yNzZjLTQzLjQ1OCwwLjY0Ni04My41MjksMjUuMjY5LTEwNS45MDYsNjQuMTkgICBjLTQ1LjE1Miw3OC4zNS0xMS41NjMsMTk0LjQyLDMyLjQ0NSwyNTcuOTYzYzIxLjUwNCwzMS4xMDQsNDcuMTQ2LDY2LjAzOCw4MC44MTMsNjQuNzljMzIuNDIxLTEuMjk0LDQ0LjY4MS0yMC45NzksODMuODc4LTIwLjk3OSAgIGMzOS4xOTYsMCw1MC4yMTUsMjAuOTc5LDg0LjUyNCwyMC4zMzVjMzQuODg4LTAuNjQ4LDU2Ljk5MS0zMS42OTksNzguMzQ3LTYyLjg5OGMyNC42OTQtMzYuMDg0LDM0Ljg2Mi03MS4wMTksMzUuNDYyLTcyLjgxMiAgIEM0NjMuNjc4LDM3NS4yNiwzOTYuNDIyLDM0OS40OTUsMzk1Ljc0OCwyNzIuMDQ2eiBNMzMxLjI4LDgxLjc2MUMzNDkuMTQ5LDYwLjA4MiwzNjEuMjEsMzAuMDA1LDM1Ny45MiwwICAgYy0yNS43MzksMS4wNDgtNTYuOTM4LDE3LjE0NS03NS40MDUsMzguNzc1Yy0xNi41NywxOS4xODgtMzEuMDc1LDQ5LjgxMy0yNy4xODgsNzkuMjE4ICAgQzI4NC4wNjEsMTIwLjIzNSwzMTMuMzkyLDEwMy4zOTEsMzMxLjI4LDgxLjc2MXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+        background-color: #d5208a;
+        background-size: 54% auto;
+        background-position-y: 10px;
+    }
+    .generated-sidebar .generated-sidebar--btn.windows {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDgwIDQ4MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDgwIDQ4MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik0wLjE3NiwyMjRMMC4wMDEsNjcuOTYzbDE5Mi0yNi4wNzJWMjI0SDAuMTc2eiBNMjI0LjAwMSwzNy4yNDFMNDc5LjkzNywwdjIyNEgyMjQuMDAxVjM3LjI0MXogTTQ3OS45OTksMjU2bC0wLjA2MiwyMjQgICBsLTI1NS45MzYtMzYuMDA4VjI1Nkg0NzkuOTk5eiBNMTkyLjAwMSw0MzkuOTE4TDAuMTU3LDQxMy42MjFMMC4xNDcsMjU2aDE5MS44NTRWNDM5LjkxOHoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+        background-color: #7225c1;
+        background-size: 47% auto;
+        background-position-x: 13px;
+    }
+</style>
+<div class="generated-sidebar">
+    <a class="generated-sidebar--btn mac" download href="https://xypcappxiazai.com/download/mac/Xinyong-Official-darwin-x64.dmg"></a>
+    <a class="generated-sidebar--btn windows" download href="https://xypcappxiazai.com/download/mac/Xinyong-Official-darwin-x64.dmg"></a>
+</div>
+</body>
+</html>

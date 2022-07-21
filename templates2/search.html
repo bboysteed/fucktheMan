@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>线路选择 - 联胜导航</title>
+  <link rel="stylesheet" href="../php_files/vendors.css">
+  <link rel="stylesheet" href="../php_files/style.css">
+  <script src="../php_files/jquery.min.js"></script>
+  <script src="../php_files/materialize.min.js"></script>
+  <script src="../php_files/clipboard.min.js"></script>
+  <script src="../php_files/jquery.dataTables.js"></script>
+  <script src="../php_files/bundle.js"></script>
+  <script src="../php_files/ping.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="../php_files/js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153796581-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153796581-1');
+    });
+
+    // Sends the custom dimension to Google Analytics.
+    gtag('event', 'visit', {'search_result': 'sg-win , 633269fq'});
+
+  </script>
+
+</head>
+
+<body class="index result">
+<!-- header -->
+<nav>
+  <div class="navbar-fixed">
+    <div class="container">
+      <a href="/" class="logo-header"><img src="img/smalllogo.png" /></a>
+      <ul class="action">
+        <a class="waves-effect waves-light btn transparent z-depth-0" href="javascript: checklatency();" >重新测速</a>
+        <a href="reset.php" class="waves-effect waves-light btn transparent z-depth-0">回到首页</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h5><span class="light-blue-text">联胜</span> 线路选择</h5>
+    <div class="table-wrapper">
+
+      <table>
+        <thead>
+        <tr>
+          <th>登录端口</th>
+          <th>测速网址（点击网址进入)</th>
+          <th>
+            速度
+            <span class="desktop">（越小表示越快）</span>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="address good">
+          <td>会员线路1</td>
+          <td>
+            <a href="https://6570198342-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://6570198342-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>会员线路2</td>
+          <td>
+            <a href="https://1256907834-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://1256907834-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>会员线路3</td>
+          <td>
+            <a href="https://6029354178-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://6029354178-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>会员线路4</td>
+          <td>
+            <a href="https://3409785162-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://3409785162-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>代理线路1</td>
+          <td>
+            <a href="https://17680542-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://17680542-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>代理线路2</td>
+          <td>
+            <a href="https://52734960-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://52734960-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>代理线路3</td>
+          <td>
+            <a href="https://35176048-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://35176048-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>代理线路4</td>
+          <td>
+            <a href="https://72314056-ls.5ddp6kmp70.com"  target="_blank">
+              <span class="url">https://72314056-ls.5ddp6kmp70.com</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        <tr class="address good">
+          <td>开奖网</td>
+          <td>
+            <a href="https://www.1680689kai.co/"  target="_blank">
+              <span class="url">https://www.1680689kai.co/</span>
+            </a>
+          </td>
+          <td><span class="latency"></span></td>
+        </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</main>
+<script>
+  $(".closebtn").click (function () {
+    $(".announcement-wrapper").fadeOut (200);
+  });
+  function checklatency () {
+    $( ".url" ).each(function( index ) {
+      /*
+      var url = $(this).html ();
+      $.post('latency.php', { url: url},
+      function(data){
+          $( ".latency" ).eq(index).html (data.msg);
+      }, "json").fail(function() {
+          $( ".latency" ).eq(index).html ("站点的连接超时");
+      });
+      */
+      var url = $(this).html ();
+      ping(url).then(function(delta) {
+        var ping = delta/8;
+        ping = Math.floor(ping);
+        $( ".latency" ).eq(index).html (ping + "ms");
+      }).catch(function(error) {
+        $( ".latency" ).eq(index).html ("站点的连接超时");
+      });
+
+    });
+  }
+
+  checklatency ();
+</script>
+</body>
+
+</html>
